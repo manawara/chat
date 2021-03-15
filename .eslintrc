@@ -1,0 +1,27 @@
+{
+  "extends": ["airbnb", "prettier", "prettier/react"],
+  "env": {
+    "jest": true
+  },
+  "parser": "babel-eslint",
+
+  "globals": {
+    "document": true
+  },
+  "rules": {
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "import/no-extraneous-dependencies": [
+      0,
+      { "devDependencies": false, "optionalDependencies": false, "peerDependencies": false }
+    ],
+    "react/state-in-constructor": [0, "never"],
+    "react/destructuring-assignment": [1, "always", { "ignoreClassFields": 1 }]
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "moduleDirectory": ["node_modules", "src/"]
+      }
+    }
+  }
+}
